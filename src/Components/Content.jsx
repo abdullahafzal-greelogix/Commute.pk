@@ -73,7 +73,10 @@ const Content = () => {
                                 placeholder="Where to go?"
                               />
                               <div className="date-time-input">
-                                <DatePicker className="date" />
+                                <DatePicker
+                                  className="date"
+                                  placeholderText="Date"
+                                />
                                 <TimePicker
                                   start="10:00"
                                   end="21:00"
@@ -83,6 +86,195 @@ const Content = () => {
                               </div>
                               <Button varient="primary" className="">
                                 Search Rides
+                              </Button>
+                            </Form>
+                          </div>
+                        </TabPanel>
+                        <TabPanel>
+                          <div className="incity-input">
+                            <Form>
+                              <Form.Control
+                                type="text"
+                                placeholder="Your Location"
+                              />
+                              <Form.Control
+                                type="text"
+                                placeholder="Where to go?"
+                              />
+                              <div className="date-time-input">
+                                <DatePicker
+                                  className="date"
+                                  placeholderText="Date"
+                                />
+                                <TimePicker
+                                  start="10:00"
+                                  end="21:00"
+                                  step={30}
+                                  className="time"
+                                />
+                              </div>
+                              <Button varient="primary" className="">
+                                Search Rides
+                              </Button>
+                            </Form>
+                          </div>
+                        </TabPanel>
+                      </Tabs>
+                    </div>
+                  </div>
+                </TabPanel>
+                <TabPanel>
+                  <div className="tabs-content-main">
+                    <div className="tabs-content">
+                      <h2>Request Ride</h2>
+                      <p>Post your requests so drivers can contact you</p>
+                    </div>
+                    <div className="tabs-route">
+                      <Tabs>
+                        <TabList>
+                          <Tab>In-City</Tab>
+                          <Tab>Out-City</Tab>
+                        </TabList>
+
+                        <TabPanel>
+                          <div className="incity-input">
+                            <Form>
+                              <Form.Control
+                                type="text"
+                                placeholder="Your Location"
+                              />
+                              <Form.Control
+                                type="text"
+                                placeholder="Where to go?"
+                              />
+                              <div className="date-time-input">
+                                <DatePicker
+                                  className="date"
+                                  placeholderText="Date"
+                                />
+                                <TimePicker
+                                  start="10:00"
+                                  end="21:00"
+                                  step={30}
+                                  className="time"
+                                />
+                              </div>
+                              <Button varient="primary" className="">
+                                Request Ride
+                              </Button>
+                            </Form>
+                          </div>
+                        </TabPanel>
+                        <TabPanel>
+                          <div className="incity-input">
+                            <Form>
+                              <Form.Control
+                                type="text"
+                                placeholder="Your Location"
+                              />
+                              <Form.Control
+                                type="text"
+                                placeholder="Where to go?"
+                              />
+                              <div className="date-time-input">
+                                <DatePicker
+                                  className="date"
+                                  placeholderText="Date"
+                                />
+                                <TimePicker
+                                  start="10:00"
+                                  end="21:00"
+                                  step={30}
+                                  className="time"
+                                />
+                              </div>
+                              <Button varient="primary" className="">
+                                Request Ride
+                              </Button>
+                            </Form>
+                          </div>
+                        </TabPanel>
+                      </Tabs>
+                    </div>
+                  </div>
+                </TabPanel>
+                <TabPanel>
+                  <div className="tabs-content-main">
+                    <div className="tabs-content">
+                      <h2>Post Ride</h2>
+                      <p>Post your rides so commuters can contact you</p>
+                    </div>
+                    <div className="tabs-route">
+                      <Tabs>
+                        <TabList>
+                          <Tab>In-City</Tab>
+                          <Tab>Out-City</Tab>
+                        </TabList>
+
+                        <TabPanel>
+                          <div className="incity-input">
+                            <Form>
+                              <Form.Control
+                                type="text"
+                                placeholder="Your Location"
+                              />
+                              <Form.Control
+                                type="text"
+                                placeholder="Where to go?"
+                              />
+                              <div className="location-name">
+                                <Form.Control
+                                  type="text"
+                                  placeholder="Pickup Points (e.g. Alrehman plaza chowk, "
+                                />
+                              </div>
+                              <div className="date-time-input post-ride-input">
+                                {["checkbox"].map((type) => (
+                                  <div
+                                    key={`default-${type}`}
+                                    className="checkbox-design"
+                                  >
+                                    <Form.Check
+                                      type={type}
+                                      id={`default-${type}`}
+                                      label={`Daily Basis ${type}`}
+                                    />
+                                  </div>
+                                ))}
+                                <DatePicker
+                                  className="date"
+                                  placeholderText="Date"
+                                />
+                              </div>
+                              <TimePicker
+                                start="10:00"
+                                end="21:00"
+                                step={30}
+                                className="time post-time"
+                              />
+                              <div className="post-info-required">
+                                <Form.Control
+                                  type="tel"
+                                  placeholder="Seats: 0"
+                                />
+                                <Form.Control type="tel" placeholder="Rs.100" />
+                              </div>
+                              <div className="post-info-required">
+                                <Form.Control type="tel" placeholder="AC" />
+                                <Form.Control type="tel" placeholder="Pets" />
+                              </div>
+                              <div className="post-info-required">
+                                <Form.Control
+                                  type="tel"
+                                  placeholder="Smoking"
+                                />
+                                <Form.Control
+                                  type="tel"
+                                  placeholder="Luggage"
+                                />
+                              </div>
+                              <Button varient="primary" className="">
+                                Post Ride
                               </Button>
                             </Form>
                           </div>
@@ -116,12 +308,6 @@ const Content = () => {
                       </Tabs>
                     </div>
                   </div>
-                </TabPanel>
-                <TabPanel>
-                  <h2>Any content 2</h2>
-                </TabPanel>
-                <TabPanel>
-                  <h2>Any content 3</h2>
                 </TabPanel>
               </Tabs>
             </div>
